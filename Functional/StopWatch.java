@@ -1,6 +1,7 @@
-package com.bridgeLabz.Functional;
-import java.util.*;
-import java.time.LocalTime;
+package com.bridgelabz.Program.Functional;
+
+import java.util.Scanner;
+
 public class StopWatch {
 	
 	static double start = 0, stop = 0;
@@ -35,4 +36,5 @@ public class StopWatch {
 		double elapseTime=elapsedTime(start,stop);
 		System.out.println("Elapsed time:-->"+elapseTime);
 	}
+
 }

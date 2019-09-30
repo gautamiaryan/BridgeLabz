@@ -1,9 +1,7 @@
-package com.bridgeLabz.DataStructure;
-
-import java.util.Scanner;
-
-public class PelindromeChecker {
-   
+package com.bridgelabz.Program.DataStructure;
+import java.util.*;
+public class PalindromeChecker {
+	
 	public static void main(String[] args) {
 		Deque deque=new Deque();
 		 Scanner scanner=new Scanner(System.in);
@@ -30,4 +28,5 @@ public class PelindromeChecker {
 
 	
  }
+
 }

@@ -1,4 +1,4 @@
-package com.bridgeLabz.DataStructure;
+package com.bridgelabz.Program.DataStructure;
 
 public class PrimeNumber2DArray {
 	
@@ -45,4 +45,5 @@ public class PrimeNumber2DArray {
 				System.out.println("");
 			}
 	}
+
 }

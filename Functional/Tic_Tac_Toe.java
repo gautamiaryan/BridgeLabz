@@ -1,6 +1,8 @@
-package com.bridgeLabz.Functional;
-import java.util.*;
-public class TicTac {
+package com.bridgelabz.Program.Functional;
+
+import java.util.Scanner;
+
+public class Tic_Tac_Toe {
 	
 	static Scanner scanner =new Scanner(System.in);
 	static int player=0;
@@ -104,5 +106,6 @@ public class TicTac {
 
 		play();
 	}
+
 
 }

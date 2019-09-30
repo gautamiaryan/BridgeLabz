@@ -1,4 +1,4 @@
-package com.bridgeLabz.Functional;
+package com.bridgelabz.Program.Functional;
 
 import java.util.Scanner;
 
@@ -26,7 +26,6 @@ public class Triplet {
             }
         }
     }
-	
 	
 
 }

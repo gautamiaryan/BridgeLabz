@@ -1,7 +1,5 @@
-package com.bridgelab.algorithm;
-
-import java.util.Scanner;
-
+package com.bridgelabz.Program.Algorithm;
+import java.util.*;
 public class VendingMachine {
 	
 	private static final int ONE=1;
@@ -78,6 +76,5 @@ public class VendingMachine {
         }
         System.out.println("Total Number of Notes:--->"+totalNotes);
     }
-
 
 }

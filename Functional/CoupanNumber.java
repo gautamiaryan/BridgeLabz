@@ -1,7 +1,9 @@
-package com.bridgeLabz.Functional;
-import java.util.*;
+package com.bridgelabz.Program.Functional;
+
+import java.util.Scanner;
 
 public class CoupanNumber {
+	
 	public static void main(String [] args){
         Scanner scn=new Scanner(System.in);
         System.out.println("Enter The Number of Coupan");
@@ -30,5 +32,5 @@ public class CoupanNumber {
         }
         return count;
     }
-    
+
 }

@@ -1,7 +1,10 @@
-package com.bridgeLabz.Functional;
+package com.bridgelabz.Program.Functional;
+
+import java.io.PrintWriter;
 import java.util.*;
-import java.io.*;
-public class TwoDimensionalArray {
+
+public class Two_Dimensional_Array {
+	
 	static Scanner scan = new Scanner(System.in);
 
 	public static int[][] arrayInt(int row, int column) {
@@ -102,4 +105,5 @@ public class TwoDimensionalArray {
 
 		display(a, b, c, m, n);
 }
+
 }

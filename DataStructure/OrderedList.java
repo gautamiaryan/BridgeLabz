@@ -1,11 +1,13 @@
-package com.bridgeLabz.DataStructure;
-import java.util.*;
+package com.bridgelabz.Program.DataStructure;
+
+import java.util.Scanner;
+
 public class OrderedList<T  extends Comparable<T>> {
 	Node head;
 	Node tail;
 	int size = 0;
 	class Node {
-		
+
 		Object data;
 		Node next;
 		Node prev;
@@ -15,9 +17,9 @@ public class OrderedList<T  extends Comparable<T>> {
 			this.next = null;
 			this.prev =null;
 		}
-		
+
 	}
-	
+
 	public void add(T data) {
 
 		Node temp = head;
@@ -28,7 +30,7 @@ public class OrderedList<T  extends Comparable<T>> {
 			head.next = tail;
 			tail = head;
 		} else if (data.compareTo((T) head.data) < 0) {
-			
+
 			node.next = head;
 			head = node;
 		} else {
@@ -46,8 +48,8 @@ public class OrderedList<T  extends Comparable<T>> {
 			node.next = node;
 		}
 	}
-	
-	
+
+
 	public void remove(T item) {
 		Node node = head;
 		Node prev = null;
@@ -73,7 +75,7 @@ public class OrderedList<T  extends Comparable<T>> {
 			size -= 1;
 		}
 	}
-     
+
 	public boolean search(T item) {
 		Node node = head;
 		while (node != null) {
@@ -84,20 +86,20 @@ public class OrderedList<T  extends Comparable<T>> {
 		}
 		return false;
 	}
-	
+
 	public boolean isEmpty() {
 		if (head == null) {
 			return true;
 		}
 		else {
-		return false;
+			return false;
 		}
 	}
-	
+
 	public int size() {
 		return size;
 	}
-	
+
 	public int index(T item) {
 		int index = 0;
 		Node n = head;
@@ -108,7 +110,7 @@ public class OrderedList<T  extends Comparable<T>> {
 		return index;
 
 	}
-	
+
 	public T pop() {
 		Node node = head;
 		Node prev = null;
@@ -121,7 +123,7 @@ public class OrderedList<T  extends Comparable<T>> {
 		size -= 1;
 		return (T) node.data;
 	}
-	
+
 	public T pop(int pos) {
 		int index = 0;
 		Node prev = null;
@@ -142,7 +144,7 @@ public class OrderedList<T  extends Comparable<T>> {
 			return (T) node.data;
 		}
 	}
-	
+
 	public String toString() {
 
 		StringBuffer s = new StringBuffer();
@@ -152,19 +154,19 @@ public class OrderedList<T  extends Comparable<T>> {
 			s.append(node.data);
 			node = node.next;
 			s.append(" ");
-			
+
 		}
 		s.append("]");
 		return s.toString();
 
 	}
 
-	
+
 	public void show() {
 		System.out.println(toString());
 	}
-	
-	
+
+
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner (System.in);
 		OrderedList list =new OrderedList();
@@ -232,11 +234,11 @@ public class OrderedList<T  extends Comparable<T>> {
 			}
 		}
 	}
-	
-	
-	
-	
 
-	
+
+
+
+
+
 
 }

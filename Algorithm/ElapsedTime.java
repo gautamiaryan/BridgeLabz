@@ -1,8 +1,9 @@
-package com.bridgelab.algorithm;
-import com.bridgeLabz.Functional.*;
+package com.bridgelabz.Program.Algorithm;
+import com.bridgelabz.Program.Utility.*;
 import java.util.*;
-import java.lang.*;
+import com.bridgelabz.Program.Functional.*;
 public class ElapsedTime {
+	
 	public static void main(String[] args) {
 		Scanner scanner= new Scanner(System.in);
 		StopWatch stopWatch=new StopWatch();

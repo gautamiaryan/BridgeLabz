@@ -1,8 +1,8 @@
-package com.bridgeLabz.Functional;
+package com.bridgelabz.Program.Functional;
 
 import java.util.Scanner;
 
-public class Power {
+public class PowerOfTwo {
 	public static void main(String [] args){
 	    Scanner scanner=new Scanner(System.in);
 	    System.out.println("Please enter the range");
@@ -17,4 +17,5 @@ public class Power {
 	            System.out.println(value);
 	        }
 	    }
+
 }

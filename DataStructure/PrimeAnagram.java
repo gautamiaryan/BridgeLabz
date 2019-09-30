@@ -1,8 +1,7 @@
-package com.bridgeLabz.DataStructure;
-
-import java.util.Arrays;
-
+package com.bridgelabz.Program.DataStructure;
+import java.util.*;
 public class PrimeAnagram {
+	
 	static boolean isAnagram(String A,String B){
 		int a=A.length();
 		int b=B.length();
@@ -43,4 +42,5 @@ public class PrimeAnagram {
 //		}
 		
 	}
+
 }

@@ -1,8 +1,7 @@
-package com.bridgeLabz.DataStructure;
-
-import java.util.Scanner;
-
+package com.bridgelabz.Program.DataStructure;
+import java.util.*;
 public class BinarySearchTree {
+	
 	static int M=100000007;
 	static long factorial(int n) 
 	{ 
@@ -56,4 +55,5 @@ public class BinarySearchTree {
 	}
 	
 	
+
 }

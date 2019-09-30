@@ -1,7 +1,8 @@
-package com.bridgeLabz.DataStructure;
+package com.bridgelabz.Program.DataStructure;
 
 import java.util.Scanner;
 
+@SuppressWarnings("unused")
 public class Stack<T> {
 
 	Object [] element;
@@ -12,7 +13,7 @@ public class Stack<T> {
 		element=new Object[10];
 		top=-1;
 	}
-	
+
 	public boolean push(Object object){
 		if(top==capecity-1)
 		{
@@ -22,7 +23,7 @@ public class Stack<T> {
 		element[++top]=object;
 		return true;
 	}
-	
+
 	public Object pop(){
 		if(top==-1){
 			System.out.println("Stack is underFlow");
@@ -38,15 +39,15 @@ public class Stack<T> {
 		}
 		return element[top];
 	}
-	
+
 	public int size(){
 		return top+1;
 	}
-	
+
 	public boolean isEmpty(){
 		return top==-1;
 	}
-	
+
 	public String toString(){
 		String st="[";
 		for (int i = 0; i <= top; i++)
@@ -57,44 +58,16 @@ public class Stack<T> {
 		}
 		return st+"]";
 	}
-	
+
 	public void display()
 	{ 
 		if(!isEmpty())
 		{
-		int temp =top;
-	while(temp!=-1)
-	{	System.out.println(element[temp]);
-		temp--;}
+			int temp =top;
+			while(temp!=-1)
+			{	System.out.println(element[temp]);
+			temp--;}
 		}
 	}
-	
-	public static void main(String[] args) {
-		Scanner scanner=new Scanner(System.in);
-		Stack<String> stack=new Stack<String>();
-		System.out.println("Enter the expression");
-		String expression=scanner.nextLine();
-		for(int i=0;i<expression.length();i++) {
-	     char current=expression.charAt(i);
-	     if(current=='[' || current=='{' || current=='(') {
-	    	 stack.push(current);
-	    	 
-	     } 
-	    else if(current==']' || current=='}' || current==')') {
-	    	 
-	    			 stack.pop(); 
-	    }
-	     
-	    else {
-	    	 continue;
-	     
-	    }
-		}
-		if(stack.isEmpty()) {
-			System.out.println("Balanced Parenthesis");
-		}
-		else {
-			System.out.println("Not a Balanced Parenthesis");
-		}
-		}
-	}
+
+}

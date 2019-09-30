@@ -1,4 +1,4 @@
-package com.bridgeLabz.DataStructure;
+package com.bridgelabz.Program.DataStructure;
 import java.util.*;
 class Node {
 	int data;
@@ -8,7 +8,7 @@ public class QueueLinkedList<T> {
 	private Node front;
 	private Node rear;
 
-	
+
 	QueueLinkedList(){
 		this.front =null;
 		this.rear =null;
@@ -28,7 +28,7 @@ public class QueueLinkedList<T> {
 	}
 
 
-	
+
 	public int deQueue(){
 		if(front==null)
 			return 0;
@@ -43,7 +43,7 @@ public class QueueLinkedList<T> {
 	}
 
 
-	
+
 	public void display(){  
 		if(!isEmpty()){
 			Node temp = front;
@@ -54,14 +54,14 @@ public class QueueLinkedList<T> {
 		}
 	}
 
-	
+
 
 	public boolean isEmpty(){
 		return front==null;
 	}
 
 
-	
+
 	public void sort(){
 		Node temp =front;
 		Node index = null;
@@ -79,8 +79,8 @@ public class QueueLinkedList<T> {
 			temp = temp.next;
 		}  
 	}
-	
-	
+
+
 
 	public QueueLinkedList removeDuplicate(){
 		QueueLinkedList queue = new QueueLinkedList();
@@ -89,12 +89,11 @@ public class QueueLinkedList<T> {
 		Node index = null;
 		while(temp!=null){
 			index = temp.next;
-			while(index!=null)
-			{
-				if(index.data==temp.data)
-				{
+			while(index!=null){
+				if(index.data==temp.data){
 					temp = temp.next;  
-				}index = index.next;
+				}
+				index = index.next;
 			}
 			queue.enQueue(temp.data);
 			temp=temp.next;
@@ -103,35 +102,5 @@ public class QueueLinkedList<T> {
 		return queue;
 	}
 
-	
 
-	public boolean isAnagram(String str1,String str2){
-		if(str1.length() != str2.length()){
-			return false;
-		}
-
-		char str3 [] =str1.toLowerCase().toCharArray();
-		char str4 [] =str2.toLowerCase().toCharArray();
-
-		Arrays.sort(str3);
-		Arrays.sort(str4);
-
-		return Arrays.equals(str3, str4);
-	}
-
-
-
-	public boolean isPrime(int n){
-		for(int i=2;i<n;i++){
-			if(n%i == 0)
-				return false;
-		}
-		return true;
-	}
-	
-	
-	public static void main(String [] arr) {
-		int n=2;
-		System.out.println(n);
-	}
 }

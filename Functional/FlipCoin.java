@@ -1,7 +1,7 @@
-package com.bridgeLabz.Functional;
+package com.bridgelabz.Program.Functional;
 import java.util.*;
 public class FlipCoin {
-
+	
 	public static void main(String [] args){
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter the number of Flip Coin");
@@ -27,4 +27,5 @@ public class FlipCoin {
       double percentageOfTell=(numberOfTell*100)/number;
       System.out.println("Percentage of Head:-"+percentageOfHead+"%  Percentage of Tell:-"+percentageOfTell+"% ");
     }
+
 }

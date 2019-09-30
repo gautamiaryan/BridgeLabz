@@ -1,6 +1,7 @@
-package com.bridgeLabz.Functional;
+package com.bridgelabz.Program.Functional;
 import java.util.*;
 public class HarmonicNumber {
+	
 	public static void main(String[] args){
 	    Scanner scn=new Scanner(System.in);
 	    System.out.println("Enter the Number");
@@ -15,4 +16,5 @@ public class HarmonicNumber {
 	     }
 	     System.out.println(nthHarNumber);
 	    }
+
 }

@@ -1,6 +1,7 @@
-package com.bridgeLabz.DataStructure;
-import java.util.*;
+package com.bridgelabz.Program.DataStructure;
+
 public class Calender {
+	
 	public static int day(int month, int day, int year)
 	{
 		int y = year - (14 - month) / 12;
@@ -78,5 +79,5 @@ public class Calender {
         }
         }
        
-	}
 
+}

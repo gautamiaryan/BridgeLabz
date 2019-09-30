@@ -1,9 +1,8 @@
-package com.bridgelab.algorithm;
-
-import java.util.Scanner;
-
+package com.bridgelabz.Program.Utility;
+import java.util.*;
 public class Util {
-    static Scanner scanner=new Scanner(System.in);
+	
+	static Scanner scanner=new Scanner(System.in);
 	static void dayOfWeek(int day,int month,int year){
 
 		int mYear = year -(14 - month) / 12;
@@ -110,8 +109,6 @@ public class Util {
 		}
 		return decimal;
 	}
-
-
 
 
 }

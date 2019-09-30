@@ -1,6 +1,7 @@
-package com.bridgelab.algorithm;
+package com.bridgelabz.Program.Algorithm;
 import java.util.*;
 public class GuessNumber {
+	
 	static Scanner scanner=new Scanner(System.in);
 	static int findMyNumber(int number) {
 
@@ -31,5 +32,6 @@ public class GuessNumber {
 		}
 
 }
+
 
 }

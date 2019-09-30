@@ -1,5 +1,7 @@
-package com.bridgeLabz.Functional;
-import java.util.*;
+package com.bridgelabz.Program.Functional;
+
+import java.util.Scanner;
+
 public class Quadratic {
 	
 	public static void main(String[] args) {
@@ -29,8 +31,6 @@ public class Quadratic {
             System.out.format("root1 = %.2f+%.2fi and root2 = %.2f-%.2fi", realPart, imaginaryPart, realPart,
                     imaginaryPart);
         }
-       
-        
-    }
 
+}
 }

@@ -1,6 +1,9 @@
-package com.bridgeLabz.Functional;
-import java.util.*;
+package com.bridgelabz.Program.Functional;
+
+import java.util.Scanner;
+
 public class Distance {
+	
 	public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter the value of X and Y");
@@ -13,4 +16,5 @@ public class Distance {
         double result =Math.sqrt(dist);
         return result;
     }
+
 }

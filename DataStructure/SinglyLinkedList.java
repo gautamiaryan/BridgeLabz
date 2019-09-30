@@ -1,10 +1,5 @@
-package com.bridgeLabz.DataStructure;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Scanner;
-
+package com.bridgelabz.Program.DataStructure;
+import java.util.*;
 public class SinglyLinkedList<T>{
 	class Node{
 		private T data;

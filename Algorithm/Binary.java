@@ -1,9 +1,7 @@
-package com.bridgelab.algorithm;
-
-import java.util.Scanner;
-
+package com.bridgelabz.Program.Algorithm;
+import java.util.*;
 public class Binary {
-
+	
 	static void showArr(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i]);
@@ -56,5 +54,6 @@ public class Binary {
 		}
 
 	}
+
 
 }

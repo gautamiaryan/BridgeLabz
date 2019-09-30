@@ -1,14 +1,10 @@
-package com.bridgelab.algorithm;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-
+package com.bridgelabz.Program.Utility;
+import java.util.*;
 public class Utility {
+	
 	static Scanner scanner = new Scanner(System.in);    
 
-	static List<Integer> primeNumberUptoRange(int range){
+	public static List<Integer> primeNumberUptoRange(int range){
 		List<Integer> listOfPrime=new ArrayList<Integer>();
 		for(int i=1;i<=range;i++){
 			int count=0;
@@ -45,7 +41,7 @@ public class Utility {
 	}
 
 
-	static boolean isPalindromeString(String string){
+	public static boolean isPalindromeString(String string){
 		String temp="";
 		for(int i=string.length()-1;i>=0;i--){
 			temp+=string.charAt(i);
@@ -58,7 +54,7 @@ public class Utility {
 	}
 
 
-	static boolean isPalindrome(int number){
+	public static boolean isPalindrome(int number){
 		int number1=number;
 		int reverse=0;
 		int remainder;
@@ -75,7 +71,7 @@ public class Utility {
 		}
 	}
 
-	static boolean isAnagram(String A,String B){
+	public static boolean isAnagram(String A,String B){
 		int a=A.length();
 		int b=B.length();
 		if(a!=b){
@@ -105,23 +101,26 @@ public class Utility {
 	}
 
 
-	public static void primeAnagrams() {
-		ArrayList<Integer> ar = new ArrayList<Integer>();
+	public static ArrayList<Integer> primeAnagrams() {
+		ArrayList<Integer> primeList = new ArrayList<Integer>();
+		ArrayList<Integer> primeAnagramList=new ArrayList<Integer>();
 		System.out.println();
 		for(int i=0;i<=1000;i++) {
 			if (isPrime(i))
-				ar.add(i);
+				primeList.add(i);
 		}
-		for (int i = 0; i < ar.size(); i++) {
-			for (int j = i + 1; j < ar.size(); j++) {
-				if (isAnagram(Integer.toString(ar.get(i)), Integer.toString(ar.get(j)))) {
-					System.out.println(ar.get(i) + "  " + ar.get(j));
+		for (int i = 0; i < primeList.size(); i++) {
+			for (int j = i + 1; j < primeList.size(); j++) {
+				if (isAnagram(Integer.toString(primeList.get(i)), Integer.toString(primeList.get(j)))) {
+					primeAnagramList.add(primeList.get(i));
+					primeAnagramList.add(primeList.get(j));
 				}
 			}
 		}
+		return primeAnagramList;
 	}
 
-	static int[] insertionSortForInteger(int arr[]) {
+	public static int[] insertionSortForInteger(int arr[]) {
 		int n = arr.length;
 		for (int i = 1; i < n; ++i) {
 			int key = arr[i];
@@ -137,7 +136,7 @@ public class Utility {
 
 
 
-	static void printSortedArray(int arr[]) {
+	public static void printSortedArray(int arr[]) {
 		int length = arr.length;
 		for (int i = 0; i < length; ++i)
 			System.out.print(arr[i] + " ");
@@ -145,7 +144,7 @@ public class Utility {
 		System.out.println();
 	}
 	
-	static void printStringArray(String [] string) {
+	public static void printStringArray(String [] string) {
 		int length=string.length;
 		for(int i=0;i<length;i++) {
 			System.out.print(string[i]+" ");
@@ -154,7 +153,7 @@ public class Utility {
 	}
 
 
-	static String[] insertionSortForString(String array[]) {
+	public static String[] insertionSortForString(String array[]) {
 		String temp = "";
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i + 1; j < array.length; j++) {
@@ -169,7 +168,7 @@ public class Utility {
 	}
 
 
-	static int [] bubbleSortForInteger(int []arr){
+	public static int [] bubbleSortForInteger(int []arr){
 		int length=arr.length;
 		for (int i = 0; i < length; i++){
 			for (int j = 0; j < length - i - 1; j++){
@@ -185,7 +184,7 @@ public class Utility {
 
 
 
-	static String [] bubbleSortForString(String [] arr){
+	public static String [] bubbleSortForString(String [] arr){
 		String temp="";
 		for (int j = 0; j < arr.length; j++) {
 			for (int i = j + 1; i < arr.length; i++) {
@@ -202,7 +201,7 @@ public class Utility {
 
 
 
-	static int binarySearchForInteger(int [] arr,int startIndex,int endIndex,int numberToSearch){
+	public static int binarySearchForInteger(int [] arr,int startIndex,int endIndex,int numberToSearch){
 
 		if (endIndex >= startIndex) {
 			int midIndex = startIndex + (endIndex - startIndex) / 2;
@@ -226,13 +225,13 @@ public class Utility {
 	}
 
 
-	static int binarySearchForString(String string[],String wordToSeach){
+	public static int binarySearchForString(String string[],String wordToSearch){
 		int startIndex=0;
 		int endIndex=string.length-1;
 		while (startIndex <= endIndex) {
 			int midIndex = startIndex + (endIndex - startIndex) / 2;
 
-			int result = wordToSeach.compareTo(string[midIndex]);
+			int result = wordToSearch.compareTo(string[midIndex]);
 
 			if (result == 0)
 				return midIndex;
@@ -245,13 +244,11 @@ public class Utility {
 			else
 				endIndex = midIndex - 1;
 		}
-
-
-
+		
 		return-1;
 	}
 
-	static void dayOfWeek(int day,int month,int year){
+	public static void dayOfWeek(int day,int month,int year){
 
 		int mYear = year -(14 - month) / 12;
 		int x = mYear + mYear/4 - (mYear/100) + (mYear/400);
@@ -290,7 +287,7 @@ public class Utility {
 
 
 
-	static void temperatureConversion(){
+	public static void temperatureConversion(){
 
 		System.err.println("Enter Temperature in Celsius");
 		int celsius=scanner.nextInt();
@@ -302,7 +299,7 @@ public class Utility {
 		System.out.println("Temperature in Celsius is: "+inCelsius);
 	}
 
-	static void monthlyPayment(double P,double Y,double R){
+	public static void monthlyPayment(double P,double Y,double R){
 		double payment=0;
 		double n=Y*12;
 		double r=R/1200;
@@ -313,7 +310,7 @@ public class Utility {
 
 	}
 
-	static void squareRoot(Double C){
+	public static void squareRoot(Double C){
 		double t=C;
 		double epsilon = 1e-15;
 
@@ -324,7 +321,7 @@ public class Utility {
 
 	}
 
-	static int [] toBinary(int decimalValue){
+	public static int [] toBinary(int decimalValue){
 
 		String bin = "";
 		while (decimalValue != 0) {
@@ -339,7 +336,7 @@ public class Utility {
 	}
 
 
-	static int[] stringToIntArray(String bin) {
+	public static int[] stringToIntArray(String bin) {
 		int[] binary = new int[bin.length()];
 		for (int i = 0; i < binary.length; i++) {
 			binary[i] = bin.charAt(i) - 48;
@@ -347,7 +344,7 @@ public class Utility {
 		return binary;
 	}
 
-	static int toDecimal(int[] binary) {
+	public static int toDecimal(int[] binary) {
 		int decimal = 0, j = 0;
 		for (int i = binary.length - 1; i >= 0; i--) {
 			if (binary[i] == 1) {
@@ -358,7 +355,7 @@ public class Utility {
 		return decimal;
 	}
 	
-	static void merge(int []array,int startIndex,int midIndex,int endIndex) {
+	public static void merge(int []array,int startIndex,int midIndex,int endIndex) {
 		int left=midIndex-startIndex+1;
 		int right=endIndex-midIndex;
 		int [] leftArray=new int[left];
@@ -398,7 +395,7 @@ public class Utility {
 
 
 	
-	static void mergeSort(int [] array,int startIndex,int endIndex) {
+	public static void mergeSort(int [] array,int startIndex,int endIndex) {
 		if (startIndex<endIndex)  
 		{  
 		int mid = (startIndex+endIndex)/2;  

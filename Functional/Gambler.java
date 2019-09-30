@@ -1,6 +1,7 @@
-package com.bridgeLabz.Functional;
+package com.bridgelabz.Program.Functional;
 import java.util.*;
 public class Gambler {
+	
 	public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
 
@@ -38,4 +39,5 @@ public class Gambler {
         System.out.println("Percentage of Loss:-"+percentageOfLoss);
 
     }
+    
 }

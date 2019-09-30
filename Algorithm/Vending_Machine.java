@@ -1,10 +1,7 @@
-package com.bridgelab.algorithm;
-
-import java.util.Scanner;
-
+package com.bridgelabz.Program.Algorithm;
+import java.util.*;
 public class Vending_Machine {
-
-	static int [] notesValue= {1000,500,200,100,50,10,5,2,1};
+	static int [] Notes_Value= {1000,500,200,100,50,10,5,2,1};
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Please Enter the amount of Money!!:--->");
@@ -15,8 +12,8 @@ public class Vending_Machine {
 
 	static int minimumNumberOfNotes(int money) {
 		int totalNotes=0;
-		for(int i=0;i<notesValue.length;i++) {
-			int noteValue=notesValue[i];
+		for(int i=0;i<Notes_Value.length;i++) {
+			int noteValue=Notes_Value[i];
 			int numberOfEachNote=(money/noteValue);
 			System.out.println("Total number of notes of "+noteValue+" is:-->"+numberOfEachNote);
 			totalNotes+=numberOfEachNote;
@@ -24,5 +21,6 @@ public class Vending_Machine {
 		}
 		return totalNotes;
 	}
+
 
 }

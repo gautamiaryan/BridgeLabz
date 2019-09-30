@@ -1,5 +1,5 @@
-package com.bridgelab.algorithm;
-import java.util.Scanner;
+package com.bridgelabz.Program.Algorithm;
+import java.util.*;
 public class Anagram {
 	
 	public static void main(String[] args) {
