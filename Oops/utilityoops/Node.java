@@ -1,8 +1,7 @@
 package com.bridgelabz.utilityoops;
 
-
 public class Node <T>{
-	
+
 
 	 T data;
 	 Node<T> link;
@@ -20,4 +19,6 @@ public class Node <T>{
 		 return link;
 	 }
 
+	
+	
 }

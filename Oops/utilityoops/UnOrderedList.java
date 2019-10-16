@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.logging.Logger;
+
 
 public class UnOrderedList <T>{
 	
@@ -19,19 +21,21 @@ public class UnOrderedList <T>{
 	}
 	
 	public UnOrderedList() {
-		Node<T> node = new Node<>();
-		this.start = node;
-		this.end = node;
+		this.start = null;
+		this.end = null;
 	}
 
-	
-	public void readFile() {
-		String str = null;
-		try (FileReader fr = new FileReader("/home/gautam/Documents/text.txt");
+	public static final String filePath="/home/gautam/Documents/text.txt";
+	@SuppressWarnings("unchecked")
+	public void readFile(){
+		
+		try (FileReader fr = new FileReader(filePath);
 				BufferedReader br = new BufferedReader(fr)) {
-			while ((str = br.readLine()) != null) {
-				String[] sarr = str.split(",");
-				for (int i = 0; i < sarr.length; i++) {
+			     
+			for (String s; (s = br.readLine()) != null; ) {
+				String[] sarr = s.split(",");
+				for (int i = 1; i < sarr.length; i++) {
+					@SuppressWarnings("rawtypes")
 					Node node = new Node();
 					node.data = sarr[i];
 					listSize++;
@@ -47,6 +51,9 @@ public class UnOrderedList <T>{
 		} catch (IOException e) {
 			LOGGER.info(e.getMessage());
 		}
+		 catch(NullPointerException e) {
+			 e.printStackTrace();
+		 }
 
 	}
 	public void writeIntoFile() {
@@ -59,10 +66,12 @@ public class UnOrderedList <T>{
 				}
 				next = next.link;
 				fw.flush();
+				display();
 			}
 		} catch (Exception e) {
 			LOGGER.info(e.getMessage());
 		}
+		
 	}
 	
 	public void add(T item) {
@@ -70,7 +79,7 @@ public class UnOrderedList <T>{
 		if(!b) {
 		Node<T> node = new Node<>();
 		node.data = item;
-		if (start.data == null) {
+		if (start== null) {
 			end = node;
 			start = node;
 		} else {
@@ -118,6 +127,7 @@ public class UnOrderedList <T>{
 				return false;
 			}
 		}
+		
 	}
 
 	public boolean search(T item) {
@@ -256,4 +266,106 @@ public class UnOrderedList <T>{
 		listSize++;
 	}	
 
+	
+	public static void main(String[] args) {
+		UnOrderedList<Integer> list=new UnOrderedList<Integer>();
+		Scanner scn=new Scanner(System.in);
+		boolean b=true;
+		while(b) {
+			System.out.println("Enter your choice \n1.readfile\n2.writeIntoFile\n3.add\n4.remove\n5.search\n"
+					+ "6.isEmpty\n7.size\n8.index\n9.insert\n10.display\n11.pop\n12.pop at pos\n13.append");
+			int choice=scn.nextInt();
+			int item;
+			
+			switch(choice) {
+			
+			case 1:{
+				System.out.println("reading frpm file");
+				list.readFile();
+				break;
+				
+			}
+			case 2:{
+				System.out.println("Writing into file");
+				list.writeIntoFile();
+				break;
+				
+			}
+			case 3:{
+				System.out.println("enter item");
+				item=scn.nextInt();
+				list.add(item);
+				break;
+			}
+			case 4:{
+				System.out.println("Remove item");
+				item=scn.nextInt();
+				list.remove(item);
+				break;
+			}
+			case 5:{
+				System.out.println("enter to search");
+				item=scn.nextInt();
+				list.search(item);
+				break;
+				
+			}
+			case 6:{
+				System.out.println("is Empty");
+				list.isEmpty();
+				break;
+				
+			}
+			case 7:{
+				System.out.println("size?");
+				list.size();
+				break;
+				
+			}
+			case 8:{
+				System.out.println("index?");
+				item=scn.nextInt();
+				list.index(item);
+				break;
+				
+			}
+			case 9:{
+				System.out.println("inserted");
+				item=scn.nextInt();
+				int pos=scn.nextInt();
+				list.insert(pos, item);
+				break;
+				
+			}
+			case 10:{
+				System.out.println("display");
+				list.display();
+				break;
+			}
+			case 11:{
+				System.out.println("poped item");
+				list.pop();
+				break;
+			}
+			case 12:{
+				System.out.println("popped at pos");
+				int pos=scn.nextInt();
+				list.pop(pos);
+				break;
+			}
+			case 13:{
+				System.out.println("Appended");
+				item=scn.nextInt();
+				list.append(item);
+				break;
+				
+			}
+			default:{
+				b=false;
+				break;
+			}
+			}
+		}
+	}
+	
 }
