@@ -1,5 +1,6 @@
 package com.bridgelabz.addressbook.service.implementation;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -26,14 +27,24 @@ public class AddressBookService implements Book{
 	private ArrayList<AddressBook> list=new ArrayList<>();
 	
 	@SuppressWarnings("unchecked")
-	public AddressBookService() throws IOException, ParseException  {
+	public AddressBookService()   {
 		JSONParser jParser=new JSONParser();
 		
-		FileReader fileReader=new FileReader("/home/gautam/Documents/addressbook.json");
+		FileReader fileReader;
+		try {
+			fileReader = new FileReader("/home/gautam/Documents/addressbook.json");
 			Object object=jParser.parse(fileReader);
 			JSONArray users=(JSONArray) object;
-			users.forEach(userObj -> setFullAddress((JSONObject) userObj));	
-		
+			users.forEach(userObj -> setFullAddress((JSONObject) userObj));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+				
+			
 	}
 
 	@Override
@@ -45,8 +56,8 @@ public class AddressBookService implements Book{
 		user.setStreet((String) userObject.get("street"));
 		user.setCity((String) userObject.get("city"));
 		user.setState((String) userObject.get("state"));
-		user.setZip((Long) userObject.get("zip"));
-		user.setPhoneNo((Long) userObject.get("phoneNo"));
+		user.setZip((long) userObject.get("zip"));
+		user.setPhoneNo((long) userObject.get("phoneNo"));
 		list.add(user);
 		
 	}
@@ -55,7 +66,8 @@ public class AddressBookService implements Book{
 	public void addNewUser() {
 		AddressBook newUser=UserService.getInputForNewUser();
 		list.add(newUser);
-		writeIntoFile();
+		saveIntoFile(list);
+		writeIntoFile(list);
 		display(list);
 		
 	}
@@ -69,24 +81,31 @@ public class AddressBookService implements Book{
 				AddressBook model = list.get(i);
 				if (editUser.getHouseNum() != null) {
 					model.setHouseNum(editUser.getHouseNum());
+				
 				}
-				if (editUser.getStreet() != null) {
+				else if (editUser.getStreet() != null) {
 					model.setStreet(editUser.getStreet());
+			
 				}
-				if (editUser.getCity() != null) {
+				else if (editUser.getCity() != null) {
 					model.setCity(editUser.getCity());
+					
 				}
-				if (editUser.getState() != null) {
+				else if (editUser.getState() != null) {
 					model.setState(editUser.getState());
+					
 				}
-				if (editUser.getZip()!= 0) {
+				else if (editUser.getZip()!=null) {
 					model.setZip(editUser.getZip());
+					
 				}
-				if (editUser.getPhoneNo() != 0) {
+				else if (editUser.getPhoneNo() !=null) {
 					model.setPhoneNo(editUser.getPhoneNo());
+					list.set(i, model);
 				}
 				list.set(i, model);
-				writeIntoFile();
+				saveIntoFile(list);
+				writeIntoFile(list);
 				display(list);
 			}
 		}
@@ -101,7 +120,8 @@ public class AddressBookService implements Book{
 		String lastName = Utility.getString();
 		list.removeIf(user -> user.getFirstName().equalsIgnoreCase(firstName)
 						&& user.getLastName().equalsIgnoreCase(lastName));
-		writeIntoFile();
+		saveIntoFile(list);
+		writeIntoFile(list);
 		display(list);
 		
 		
@@ -142,12 +162,23 @@ public class AddressBookService implements Book{
 		
 	}
 	
-	public void writeIntoFile() {
+	public void writeIntoFile(ArrayList<AddressBook> list) {
 		GsonBuilder builder = new GsonBuilder();
 		builder.setPrettyPrinting();
 		Gson gson = builder.create();
-		try (FileWriter writer = new FileWriter(
-				"/home/gautam/Documents/output.json")) {
+		try (FileWriter writer = new FileWriter("/home/gautam/Documents/output.json")) {
+			writer.write(gson.toJson(list));
+			writer.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void saveIntoFile(ArrayList<AddressBook> list) {
+		GsonBuilder builder = new GsonBuilder();
+		builder.setPrettyPrinting();
+		Gson gson = builder.create();
+		try (FileWriter writer = new FileWriter("/home/gautam/Documents/addressbook.json")) {
 			writer.write(gson.toJson(list));
 			writer.flush();
 		} catch (IOException e) {

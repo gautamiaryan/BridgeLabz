@@ -270,11 +270,12 @@ public class UnOrderedList <T>{
 	public static void main(String[] args) {
 		UnOrderedList<Integer> list=new UnOrderedList<Integer>();
 		Scanner scn=new Scanner(System.in);
-		boolean b=true;
-		while(b) {
+		int choice;
+		do {
 			System.out.println("Enter your choice \n1.readfile\n2.writeIntoFile\n3.add\n4.remove\n5.search\n"
-					+ "6.isEmpty\n7.size\n8.index\n9.insert\n10.display\n11.pop\n12.pop at pos\n13.append");
-			int choice=scn.nextInt();
+					+ "6.isEmpty\n7.size\n8.index\n9.insert\n10.display\n"
+					+ "11.pop\n12.pop at pos\n13.append\n14.exit");
+			choice=scn.nextInt();
 			int item;
 			
 			switch(choice) {
@@ -360,12 +361,15 @@ public class UnOrderedList <T>{
 				break;
 				
 			}
-			default:{
-				b=false;
+			case 14:{
 				break;
+			}
+			default:{
+				System.out.println("please enter a valid choice");
 			}
 			}
 		}
+		while(choice!=14);
 	}
 	
 }

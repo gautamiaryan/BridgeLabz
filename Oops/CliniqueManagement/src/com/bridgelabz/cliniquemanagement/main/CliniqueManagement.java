@@ -3,22 +3,24 @@ package com.bridgelabz.cliniquemanagement.main;
 import com.bridgelabz.cliniquemanagement.service.implementation.CliniqueService;
 import com.bridgelabz.utilityoops.Utility;
 
+
 public class CliniqueManagement {
 	
 	public static void main(String[] args) {
 		
 		CliniqueService cliniqueService=new CliniqueService();
-		boolean flag = true;
-		while (flag) {
+		int choice;
+		do {
 			System.out.println("Enter your choice>>");
 			System.out.println("1.Take Appointment>>");
 			System.out.println("2.Search Doctor>>");
 			System.out.println("3.Search Patient>>");
 			System.out.println("4.Show popular Doctor>>");
-			System.out.println("5.Print Doctor's report>>");
-			System.out.println("6.EXIT ");
+			System.out.println("5.Show popular specialization>>");
+			System.out.println("6.Print Doctor's report>>");
+			System.out.println("7.EXIT ");
 			
-			int choice = Utility.getInt();
+			choice = Utility.getInt();
 			switch (choice) {
 
 			case 1:
@@ -34,17 +36,19 @@ public class CliniqueManagement {
 				cliniqueService.showPopularDoctor();
 				break;
 			case 5:
-				cliniqueService.displayDoctorRecord();
+				cliniqueService.showPopularSpecialization();
 				break;
 			case 6:
-				flag = false;
+				cliniqueService.displayDoctorRecord();
 				break;
+			case 7:
+				 break;
 			default:
-				System.out.println("Invalid input");
+				System.out.println("Please Enter Valid choice");
 				break;
 			}
-			
 		}
+		while(choice!=7);
 
 	}
 

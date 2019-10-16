@@ -271,7 +271,6 @@ public class CliniqueService implements Clinique{
 		}
 
 	}
-
 	private void displaySingleObject(Patient patient) {
 		System.out.println(patient.getId());
 		System.out.println(patient.getName());
@@ -282,11 +281,16 @@ public class CliniqueService implements Clinique{
 
 	@Override
 	public void showPopularSpecialization() {
-
+		for (Doctor doctor : doctors) {
+			System.out.println(doctor.getSpecialization());
+		}
 	}
 
 	@Override
 	public void showPopularDoctor() {
+		for (Doctor doctor : doctors) {
+			System.out.println(doctor.getName());
+		}
 
 	}
 

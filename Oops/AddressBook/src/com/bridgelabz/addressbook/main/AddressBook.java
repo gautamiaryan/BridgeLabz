@@ -9,16 +9,17 @@ import com.bridgelabz.addressbook.service.implementation.AddressBookService;
 import com.bridgelabz.utilityoops.Utility;
 
 
-public class AddressBookMain {
+public class AddressBook {
 
 	public static void main(String[] args) throws IOException, ParseException {
 		Book addressBookService=new AddressBookService();
-		boolean flag=true;
-		while(flag) {
+		int choice;
+		do {
 
-			System.out.println("1:add User \n2:edit User\n3:delete \n4:sort by Last Name, \n5:sort by zip");
+			System.out.println("1:add User \n2:edit User\n3:delete \n4:sort by Last Name, \n"
+					+ "5:sort by zip\n6.exit");
 			System.out.println("enter your choice : ");
-			int choice = Utility.getInt();
+		    choice = Utility.getInt();
 
 			switch (choice) {
 			case 1:
@@ -36,10 +37,14 @@ public class AddressBookMain {
 			case 5:
 				addressBookService.sortByZip();
 				break;
+			case 6:
+				break;
 			default:
-				flag = false;
+				System.out.println("Please Enter Valid Choice");
+				break;
 			}
 		}
+		while(choice!=6);
 
 	}
 }

@@ -16,7 +16,7 @@ public class UserService {
 		System.out.println("Enter Patient ID : ");
 		patient.setId(Utility.getString());
 		System.out.println("Enter Patient Mobile Number : ");
-		patient.setMobNumber(Utility.getLong());
+		patient.setMobNumber((long)Utility.getLong());
 		System.out.print("Enter Patient age : ");
 		patient.setAge(Utility.getInt());
 		patient.setDate(""+LocalDate.now());
@@ -61,7 +61,7 @@ public class UserService {
 
 	public static Patient findPatient() {
 		Patient patient = new Patient();
-		System.out.println("Enter The Choice To Search Doctor : ");
+		System.out.println("Enter The Choice To Search Patient : ");
 		System.out.println("1.By Name\n2.By Id\n3.By Mobile Number");
 		int num = Utility.getInt();
 		switch (num) {

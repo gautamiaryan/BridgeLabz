@@ -8,10 +8,11 @@ public class StockAccountMain {
 
 	public static void main(String[] args) {
 		StockAccountInterface stockAccService=new StockAccountInterfaceImpl();
-		boolean flag= true;
-		while (flag) {
-			System.out.println("1: Total shares of each account\n2: buy shares\n3: sell shares\n4:exit");
-			int choice = Utility.getInt();
+		int choice;
+		do {
+			System.out.println("1: Total shares of each account\n2: buy shares\n"
+					+ "3: sell shares\n4:exit");
+			choice = Utility.getInt();
 			switch (choice) {
 			case 1:{
 				stockAccService.valueOf();
@@ -26,15 +27,16 @@ public class StockAccountMain {
 				break;
 			}
 			case 4:{
-				stockAccService.printReport();
 				break;
 			}
-			case 5:{
-				stockAccService.readFile();
-			}
+			default:{
+				System.out.println("Please Enter a valid input");
+				break;
 			}
 
+			}
 		}
-
+		while(choice!=4);
+		
 	}
 }

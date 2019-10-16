@@ -35,45 +35,57 @@ public class UserService {
 		System.out.println("Please Enter your last name");
 		addressBookModel.setLastName(Utility.getString());
 		System.out.println("Please Enter your choice");
-		boolean b = true;
-		while (b) {
-			System.out.println(
-					" 1:change house No.\n 2:change street\n 3:change city\n 4:change state\n 5:change zip\n 6:change phone no. \n7:done");																												// File.
-			int choice = Utility.getInt();
+		int choice;
+		do {
+			System.out.println(" 1:change house No.\n 2:change street\n "
+					+ "3:change city\n 4:change state\n 5:change zip\n "
+					+ "6:change phone no. \n7:done\n 8.exit");																												// File.
+			choice = Utility.getInt();
 			switch (choice) {
-			case 1:
+			case 1:{
 				System.out.println("Please Enter house No.");
 				addressBookModel.setHouseNum(Utility.getString());
 				break;
-			case 2:
+			}
+			case 2:{
 				System.out.println("Please Enter street : ");
 				addressBookModel.setStreet(Utility.getString());
 				break;
-			case 3:
+			}
+			case 3:{
 				System.out.println("Please Enter name : ");
 				addressBookModel.setCity(Utility.getString());
 				break;
-			case 4:
+			}
+			case 4:{
 				System.out.println("Please Enter state name : ");
 				addressBookModel.setState(Utility.getString());
 				break;
-			case 5:
+			}
+			case 5:{
 				System.out.println("Please Enter Zip code : ");
 				addressBookModel.setZip(Utility.getLong());
 				break;
-			case 6:
+			}
+			case 6:{
 				System.out.println("Please Enter Phone Number : ");
 				addressBookModel.setPhoneNo(Utility.getLong());
 				break;
-			case 7:
+			}
+			case 7:{
 				return addressBookModel;
-
-			default:
-				b = false;
+			}
+			case 8:{
 				break;
 			}
+			default:{
+				System.out.println("Please enter a valid choice");
+				break;
+			}
+			}
 		}
-		return addressBookModel; 
+		while(choice!=8);
+		return addressBookModel;
 	}
 
 }
