@@ -1,0 +1,87 @@
+[
+  {
+    "stockName": "Honda",
+    "quantity": [
+      {
+        "quantity": 160,
+        "price": 25000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      },
+      {
+        "quantity": 115,
+        "price": 20000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      },
+      {
+        "quantity": 20,
+        "price": 30000,
+        "dateTime": "2019-10-16T02:12:16.583925"
+      }
+    ]
+  },
+  {
+    "stockName": "bajaj",
+    "quantity": [
+      {
+        "quantity": 150,
+        "price": 30000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      },
+      {
+        "quantity": 15,
+        "price": 20000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      }
+    ]
+  },
+  {
+    "stockName": "tvs",
+    "quantity": [
+      {
+        "quantity": 50,
+        "price": 15000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      },
+      {
+        "quantity": 15,
+        "price": 20000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      }
+    ]
+  },
+  {
+    "stockName": "yamhaha",
+    "quantity": [
+      {
+        "quantity": 55,
+        "price": 25000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      },
+      {
+        "quantity": 15,
+        "price": 20000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      }
+    ]
+  },
+  {
+    "stockName": "hero",
+    "quantity": [
+      {
+        "quantity": 75,
+        "price": 35000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      },
+      {
+        "quantity": 5,
+        "price": 20000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      },
+      {
+        "quantity": 25,
+        "price": 17000,
+        "dateTime": "2019-10-13T10:02:32.676"
+      }
+    ]
+  }
+]

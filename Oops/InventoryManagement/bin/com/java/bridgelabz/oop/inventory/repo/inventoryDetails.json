@@ -1,0 +1,52 @@
+[
+	{
+		"inventory": "rice",
+		"listofinventories": [
+			{
+				"name": "sonam",
+				"weight": 12.5,
+				"price": 40.50
+			},
+			{
+				"name": "basmati",
+				"weight": 10.0,
+				"price": 66.0
+			},
+			{
+				"name": "hmt",
+				"weight": 11.0,
+				"price": 25.0
+			}
+		]
+	},
+	{
+		"inventory": "pulse",
+		"listofinventories": [
+			{
+				"name": "blackgram",
+				"weight": 5.0,
+				"price": 50.0
+			},
+			{
+				"name": "moong",
+				"weight": 12.0,
+				"price": 40.0
+			}
+		]
+	},
+	{
+		"inventory": "wheat",
+		"listofinventories": [
+			{
+				"name": "aashirwad",
+				"weight": 5.0,
+				"price": 40.0
+			},
+			{
+				"name": "patanjali",
+				"weight": 8.5,
+				"price": 50.0
+			}
+		]
+	}
+]

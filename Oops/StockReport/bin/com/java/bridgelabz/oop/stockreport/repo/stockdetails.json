@@ -1,0 +1,19 @@
+[
+	{
+		"stockname": "Alphabet",
+		"numberofshares":100,
+		"pricepershare": 1205.58
+	},
+	{
+		"stockname": "Amazon.com",
+		"numberofshares":500,
+		"pricepershare": 4000.42
+	},
+	{
+		"stockname": "Microsoft",
+		"numberofshares":200,
+		"pricepershare": 1500.04
+	}
+	
+	
+]

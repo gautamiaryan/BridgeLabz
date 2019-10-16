@@ -1,0 +1,28 @@
+[
+
+	{
+		"doctorName": "Dr.Kabir",
+		"doctorID": "1011",
+		"specialization": "Surgeon",
+		"availability": "10AM-5PM"
+	},
+        {
+                "doctorName": "Dr.Mrigendra",
+		"doctorID": "1012",
+		"specialization": "physician",
+		"availability": "11AM-4PM"
+        },
+        {
+                "doctorName": "Dr.Ashok",
+		"doctorID": "1013",
+		"specialization": "Surgeon",
+		"availability": "5PM-12AM"
+        },
+        {
+                "doctorName": "Dr.Abhay",
+		"doctorID": "43568",
+		"specialization": "physician",
+		"availability": "5PM-12AM"
+        }
+        
+]

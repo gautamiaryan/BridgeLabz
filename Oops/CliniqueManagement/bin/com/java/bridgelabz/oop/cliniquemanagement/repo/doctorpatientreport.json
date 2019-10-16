@@ -1,0 +1,49 @@
+[
+  {
+    "doctorName": "Dr.Kabir",
+    "doctorID": "1011",
+    "specialization": "Surgeon",
+    "appointment": [
+      [
+        {
+          "name": "rahul",
+          "id": "121",
+          "age": 16,
+          "date": "2019-10-14"
+        }
+      ]
+    ]
+  },
+  {
+    "doctorName": "Dr.Mrigendra",
+    "doctorID": "1012",
+    "specialization": "physician",
+    "appointment": [
+      []
+    ]
+  },
+  {
+    "doctorName": "Dr.Ashok",
+    "doctorID": "1013",
+    "specialization": "Surgeon",
+    "appointment": [
+      []
+    ]
+  },
+  {
+    "doctorName": "Dr.Abhay",
+    "doctorID": "43568",
+    "specialization": "physician",
+    "appointment": [
+      [
+        {
+          "name": "Gautam",
+          "id": "783",
+          "mobNumber": 7254060097,
+          "age": 26,
+          "date": "2019-10-14"
+        }
+      ]
+    ]
+  }
+]

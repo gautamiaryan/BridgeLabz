@@ -7,6 +7,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/gautam/Downloads/json-simple-1.1.jar"/>
-	<classpathentry kind="lib" path="/home/gautam/Downloads/gson-2.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

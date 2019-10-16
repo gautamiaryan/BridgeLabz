@@ -1,0 +1,62 @@
+[
+  {
+    "firstName": "kumar",
+    "lastName": "viswas",
+    "houseNum": "123",
+    "street": "chimpokalii",
+    "city": "Allahabad",
+    "state": "delhi",
+    "zip": 818189,
+    "phoneNo": 7898257711
+  },
+  {
+    "firstName": "Arvind",
+    "lastName": "patel",
+    "houseNum": "907",
+    "street": "mgroad",
+    "city": "new Delhi",
+    "state": "Delhi",
+    "zip": 123,
+    "phoneNo": 2345
+  },
+  {
+    "firstName": "heera",
+    "lastName": "mani",
+    "houseNum": "9899",
+    "street": "hiiii",
+    "city": "pune",
+    "state": "maharastra",
+    "zip": 560068,
+    "phoneNo": 7254060097
+  },
+  {
+    "firstName": "Gautam1",
+    "lastName": "Kumar",
+    "houseNum": "8973",
+    "street": "roopena",
+    "city": "bengalore",
+    "state": "Bihar",
+    "zip": 560068,
+    "phoneNo": 7833456542
+  },
+  {
+    "firstName": "Abhishek",
+    "lastName": "Anand",
+    "houseNum": "78",
+    "street": "Golden",
+    "city": "Sheikhpura",
+    "state": "Bihar",
+    "zip": 805110,
+    "phoneNo": 9931961976
+  },
+  {
+    "firstName": "Gopal",
+    "lastName": "singh",
+    "houseNum": "911",
+    "street": "warisaliganj",
+    "city": "Nawada",
+    "state": "Bihar",
+    "zip": 805130,
+    "phoneNo": 9939656544
+  }
+]
