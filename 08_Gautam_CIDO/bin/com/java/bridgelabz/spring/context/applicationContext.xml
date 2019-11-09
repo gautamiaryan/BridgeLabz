@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+<bean id="address" class="com.java.bridgelabz.spring.model.Address">  
+<constructor-arg value="ghaziabad"></constructor-arg>  
+<constructor-arg value="UP"></constructor-arg>  
+<constructor-arg value="India"></constructor-arg>  
+</bean>  
+  
+  
+<bean id="employee" class="com.java.bridgelabz.spring.model.Employee">  
+<constructor-arg value="12" type="int"></constructor-arg>  
+<constructor-arg value="Gautam singh"></constructor-arg>  
+<constructor-arg>  
+<ref bean="address"/>  
+</constructor-arg>  
+</bean>   
+</beans>
